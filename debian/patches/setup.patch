@@ -1,0 +1,10 @@
+Index: docker-py/setup.py
+===================================================================
+--- docker-py.orig/setup.py
++++ docker-py/setup.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ from __future__ import print_function
+ 
+ import codecs
