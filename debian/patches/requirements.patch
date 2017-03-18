@@ -1,0 +1,41 @@
+From: Tianon Gravi <tianon@debian.org>
+Date: Sun, 8 Nov 2015 10:36:49 -0800
+Subject: Unpin dependencies so newer versions satisfy them appropriately
+
+Forwarded: https://github.com/dotcloud/docker-py/issues/101 (upstream has no interest)
+
+Patch-Name: requirements.patch
+---
+ requirements.txt      |  6 +++---
+ test-requirements.txt | 10 +++++-----
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/requirements.txt b/requirements.txt
+index a79b7bf..12b88f6 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,5 +1,5 @@
+-requests==2.5.3
++requests>=2.5.3
+ six>=1.4.0
+-websocket-client==0.32.0
++websocket-client>=0.32.0
+ backports.ssl_match_hostname>=3.5 ; python_version < '3.5'
+-ipaddress==1.0.16 ; python_version < '3.3'
+\ No newline at end of file
++ipaddress>=1.0.16 ; python_version < '3.3'
+diff --git a/test-requirements.txt b/test-requirements.txt
+index 460db10..9f9eb50 100644
+--- a/test-requirements.txt
++++ b/test-requirements.txt
+@@ -1,5 +1,5 @@
+-mock==1.0.1
+-pytest==2.9.1
+-coverage==3.7.1
+-pytest-cov==2.1.0
+-flake8==2.4.1
++mock>=1.0.1
++pytest>=2.9.1
++coverage>=3.7.1
++pytest-cov>=2.1.0
++flake8>=2.4.1
