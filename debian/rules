@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export PYBUILD_NAME=docker2
+export PYBUILD_NAME=docker
 
 # The pypi bundle includes the tests (https://github.com/docker/docker-py/issues/308), but they're really invasive and fail for reasons I haven't yet diagnosed.
 export PYBUILD_DISABLE=test
